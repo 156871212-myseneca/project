@@ -142,6 +142,7 @@ def sendtransactiondata(maintopic,mainproducerid,VIPERPORT,index,preprocesstopic
       # NOTE: The number of process logic functions MUST match the streams - the operations will be applied in the same order
 #
 #     preprocesslogic='min,max,avg,diff,outliers,variance,anomprob,varied,outliers2-5,anomprob2-5,anomprob3,gm,hm,trend,IQR,trimean,spikedetect,cv,skewness,kurtosis'
+      
 #     preprocesslogic='anomprob,outliers,consistency,variance,max,avg,diff,diffmargin,trend,min'
 
      preprocessconditions=''
@@ -202,7 +203,7 @@ latlong=lat:long'
      identifier = "IoT device performance and failures"
 
      # if dataage - use:dataage_utcoffset_timetype
-     preprocesslogic='anomprob,trend,avg,diff,min,variance,varied,consistency'
+     preprocesslogic='diff,min,variance,max,sum'
      #preprocesslogic='dataage_-4_day,trend,min,max' # millisecond,second,minute,hour,day
      #preprocesslogic='dataage_-4_hour' # millisecond,second,minute,hour,day
 #     preprocesslogic='dataage_1_minute' # millisecond,second,minute,hour,day
