@@ -218,8 +218,8 @@ def performPrediction(maintopic,producerid,VIPERPORT,topicid,producetotopic):
 #############################################################################################################
 #                                     SETUP THE TOPIC DATA STREAMS EXAMPLE
 # Change this to any number
-#numpredictions=10000
-#iotdevices=1
+numpredictions=10000
+iotdevices=2
 maintopic="iot-preprocess"
 
 predictiontopic="iot-ml-prediction-results-output"

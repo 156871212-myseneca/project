@@ -131,17 +131,17 @@ def csvlatlong(filename):
                     row['long'].lower(),row['identifier'])] = row
 
   return lookup_dict
-  #i=0
-  #for row in reader:
-   # if i > 0:   
-#     json.dump(row, jsonfile)
- #    jsonfile.write('\n')
-    #i = i +1 
+  i=0
+  for row in reader:
+    if i > 0:   
+    json.dump(row, jsonfile)
+     jsonfile.write('\n')
+    i = i +1 
 def getlatlong(reader,search,key):
   i=0
   locations = [i for i, t in enumerate(reader) if t[0]==search]
   value_at_index = list(reader.values())[locations[0]]
-#  print(value_at_index['lat'],value_at_index['long'],value_at_index['identifier'])
+  print(value_at_index['lat'],value_at_index['long'],value_at_index['identifier'])
   
   return value_at_index['lat'],value_at_index['long'],value_at_index['identifier']
 
@@ -152,7 +152,7 @@ def producetokafka(value, tmlid, identifier,producerid,maintopic,substream):
      inputbuf=value     
      topicid=-999
 
-    # print("value=",value)
+    print("value=",value)
        
      # Add a 7000 millisecond maximum delay for VIPER to wait for Kafka to return confirmation message is received and written to topic 
      delay=7000
